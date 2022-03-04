@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/725910d27b.js" crossorigin="anonymous"></script>
+    <style>
+        #mapa {
+            height: 600px; 
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" data-aos="fade-right">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+              <img src="imagenes/airbnb-logo.svg" width="150px" alt="logo airbnb">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i>Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#quienessomos">Quienes Somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#ubicacion">Ubicacion</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHRyYXZlbHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dHJhdmVsfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1437846972679-9e6e537be46e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHRyYXZlbHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-11 m-5 pl-5">
+                <a name="quienessomos"></a>
+                <h2>Quienes somos</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed egestas libero, eget porttitor orci. Duis lectus mi, feugiat a lacinia in, feugiat sit amet mi. Pellentesque commodo ante nibh, nec consequat nibh maximus id. Sed pellentesque turpis placerat quam congue scelerisque. Aenean lacinia mi orci, at ultricies dui laoreet et. Morbi non molestie nibh. Praesent feugiat urna sit amet nunc laoreet, at interdum dolor bibendum. Donec sollicitudin massa quis turpis sollicitudin malesuada. Cras congue ex in arcu molestie malesuada at sed nulla. Praesent lorem mi, viverra ut quam eget, commodo tincidunt tortor. Pellentesque convallis lacus id sodales ultricies. Ut semper neque nibh, et maximus tellus fringilla nec. Etiam dictum non felis eu tincidunt.</p>
+            </div>
+          </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-4" data-aos="flip-left">
+              <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Destino1" class="w-100 p-3">
+              <h2>Destino 1</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed egestas libero, eget porttitor orci. Duis lectus mi, feugiat a lacinia in, feugiat sit amet mi. Pellentesque commodo ante nibh, nec consequat nibh maximus id. Sed pellentesque turpis placerat quam congue scelerisque.</p>
+          </div>
+          <div class="col-12 col-md-4" data-aos="flip-left">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Destino1" class="w-100 p-3">
+            <h2>Destino 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed egestas libero, eget porttitor orci. Duis lectus mi, feugiat a lacinia in, feugiat sit amet mi. Pellentesque commodo ante nibh, nec consequat nibh maximus id. Sed pellentesque turpis placerat quam congue scelerisque.</p>
+        </div>
+        <div class="col-12 col-md-4" data-aos="flip-left">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Destino1" class="w-100 p-3">
+            <h2>Destino 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed egestas libero, eget porttitor orci. Duis lectus mi, feugiat a lacinia in, feugiat sit amet mi. Pellentesque commodo ante nibh, nec consequat nibh maximus id. Sed pellentesque turpis placerat quam congue scelerisque.</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="container m-0 p-0">
+        <div class="row m-0 p-0">
+            <div class="col-12">
+                <a name="ubicacion"></a>
+                <h3>Ubicación con Google Maps</h3>
+                <div id="mapa" class="w-100" >
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-dark text-white">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="py-3 px-2">Pie de pagina</h3>
+                <p class="py-3 px-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed egestas libero, eget porttitor orci. Duis lectus mi, feugiat a lacinia in, feugiat sit amet mi. Pellentesque commodo ante nibh, nec consequat nibh maximus id. Sed pellentesque turpis placerat quam congue scelerisque. Aenean lacinia mi orci, at ultricies dui laoreet et. Morbi non molestie nibh. Praesent feugiat urna sit amet nunc laoreet, at interdum dolor bibendum. Donec sollicitudin massa quis turpis sollicitudin malesuada. Cras congue ex in arcu molestie malesuada at sed nulla. Praesent lorem mi, viverra ut quam eget, commodo tincidunt tortor. Pellentesque convallis lacus id sodales ultricies. Ut semper neque nibh, et maximus tellus fringilla nec. Etiam dictum non felis eu tincidunt.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AlzaSyCMrQgga-C5zCuZLTVk2MPVzX7naqKZXZU&callback=iniciaMapa" async defer></script>
+    <script>
+        function iniciaMapa(){
+            var coordenadas = {
+                lat:21.15264599003433, 
+                lng:-101.71136124516065
+            }
+            var map = new google.maps.Map(
+                document.getElementById("mapa"),
+                {
+                    center: coordenadas,
+                    zoom: 15
+                }
+            );
+
+            var marcador = new google.maps.Marker(
+                {
+                    position: coordenadas,
+                    map: map
+                }
+            );
+        }
+        AOS.init();
+        
+    </script>
+</body>
+</html>
