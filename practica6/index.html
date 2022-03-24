@@ -60,6 +60,7 @@
                         lat: posicion.coords.latitude,
                         lng: posicion.coords.longitude
                     }
+                    console.table(pos)
                     marker.setPosition(pos);
                     map.panTo(pos);
                     map.setCenter(pos);
