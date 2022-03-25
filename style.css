@@ -1,0 +1,8 @@
+.basic-colors{
+    background-color: rgb(36, 36, 36);
+    color: azure;
+}
+
+.dropdown-button{
+    width: 500px; padding: 1rem; margin: 1rem;
+}
