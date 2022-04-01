@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practica 10</title>
+    <title>Practica 10 (fetch 4) Mapa de información por países</title>
+    <style>
+
+        #map {
+            height: 100%;
+        }
+
+        html, body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <div id="map"></div>
+    <script>
+        
+        var coordenadas = {
+            lat: 0,
+            lng: 0
+        };
+        var propiedades = {
+            center: coordenadas,
+            zoom: 2
+        };
+
+        function iniciaMapa(){
+            fetch('../paises.json')//fetch('../paises.json')
+            .then(function(response){
+                response.json().then(function(datos){
+                    const map = new google.mas.Map(document.getElementById('map'), propiedades);
+                    datos.forEach( marcador => {
+                        console.log(marcador);
+                        var informacion = "<strong>País:</strong> " + marcador.CountryName;
+                        var infowindow = new google.maps.InfoWindow({
+                            content: informacion
+                        });
+                        let marker = new google.maps.Marker({
+                            map: map,
+                            position: new google.maps.LatLng(marcador.CapitalLatitude, marcador.CapitalLongitude),
+                            title: marcador.CountryName
+                        });
+                        marker.addListener('click', function() {
+                            infowindow.open(map, marker);
+                        });
+                    });
+                });
+            })
+            .catch(function(error){
+                console.log('Hubo un problema con la petición Fetch:' + error.message);
+            });
+        }
+    </script>
 </body>
 </html>
