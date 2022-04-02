@@ -1,58 +1,61 @@
-.basic-colors{
-    background-color: rgb(36, 36, 36);
-    color: azure;
+.basic-colors {
+  background-color: rgb(36, 36, 36);
+  color: azure;
+}
+
+.arrow {
+  border: solid azure;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+#link{
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
 }
 
 .base-background {
   background-color: rgb(36, 36, 36);
 }
 
-.dropdown-button{
-    width: 500px; 
+.btn-1p {
+  border: 1px outset blue;
+  background-color: lightBlue;
+  height:50px;
+  width:50px;
+  cursor:pointer;
+}
+
+.btn-1p:hover {
+  background-color: blue;
+  color:white;
+}
+
+.butt:hover {
+  background-color: blue;
+  color:white;
+}
+
+.dropdown-button {
+  width: 500px;
 }
 
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    margin: 30px;
-    border: 3px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin: 30px;
+  border: 3px;
+}
 
-  .gradient-box1 {
-    display: flex;
-    align-items: center;
-    width: 90%;
-    margin: auto;
-    max-width: 22em;
-    position: relative;
-    padding: 10% 1em;
-    box-sizing: border-box;
-    color: #fff;
-    background: rgb(36, 36, 36);
-    background-clip: padding-box;
-   /* !importanté */
-    border: solid 5px transparent;
-   /* !importanté */
-    border-radius: 1em;
- }
-  .gradient-box1:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -5px;
-   /* !importanté */
-    border-radius: inherit;
-   /* !importanté */
-    background: linear-gradient(to right, rgb(255, 0, 170), rgb(98, 0, 255), rgb(102, 105, 255));
- }
-
- .gradient-box2 {
+.gradient-box1 {
   display: flex;
   align-items: center;
   width: 90%;
@@ -64,11 +67,45 @@
   color: #fff;
   background: rgb(36, 36, 36);
   background-clip: padding-box;
- /* !importanté */
+  /* !importanté */
   border: solid 5px transparent;
- /* !importanté */
+  /* !importanté */
   border-radius: 1em;
 }
+
+.gradient-box1:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -5px;
+  /* !importanté */
+  border-radius: inherit;
+  /* !importanté */
+  background: linear-gradient(to right, rgb(255, 0, 170), rgb(98, 0, 255), rgb(102, 105, 255));
+}
+
+.gradient-box2 {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  max-width: 22em;
+  position: relative;
+  padding: 10% 1em;
+  box-sizing: border-box;
+  color: #fff;
+  background: rgb(36, 36, 36);
+  background-clip: padding-box;
+  /* !importanté */
+  border: solid 5px transparent;
+  /* !importanté */
+  border-radius: 1em;
+}
+
 .gradient-box2:before {
   content: '';
   position: absolute;
@@ -78,17 +115,49 @@
   left: 0;
   z-index: -1;
   margin: -5px;
- /* !importanté */
+  /* !importanté */
   border-radius: inherit;
- /* !importanté */
-  background: linear-gradient(to right, rgb(135, 102, 255), rgb(0, 247, 255),rgb(0, 255, 98));
+  /* !importanté */
+  background: linear-gradient(to right, rgb(135, 102, 255), rgb(0, 247, 255), rgb(0, 255, 98));
 }
 
-.dropdown-menu a{  color: azure; 
-background-color: rgb(53, 53, 53); }
 
-ul{  color: azure; 
-  background-color: rgb(53, 53, 53); }
+.dropdown-menu a {
+  color: azure;
+  background-color: rgb(53, 53, 53);
+}
 
-.dropdown-menu a:hover{  color: azure; 
-  background-color: rgb(36, 36, 36); }
+ul {
+  color: azure;
+  background-color: rgb(53, 53, 53);
+}
+
+.dropdown-menu a:hover {
+  color: azure;
+  background-color: rgb(36, 36, 36);
+}
+
+
+.btn-grad {
+  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%)
+}
+
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,6 +1,6 @@
 .card {
     /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(224, 224, 224, 0.2);
+    border: none !important;
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
 }
@@ -13,7 +13,7 @@
 /* Add some padding inside the card container */
 .container-card {
     padding: 2px 16px;
-    background-color: rgb(53, 53, 53);
+    background-color: rgb(59, 59, 59);
     color: azure;
 }
 
