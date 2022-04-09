@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watch - Practica 10</title>
 
+    <link rel="stylesheet" href="../styleIndex2.css">
+    <link rel="stylesheet" href="../../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
         html,
         body {
@@ -23,7 +25,7 @@
     </style>
 </head>
 
-<body>
+<body class="basic-colors">
 
     <div class="container text-center small">
         <div class="row m-2">
@@ -41,7 +43,9 @@
         </div>
     </div>
     <div id="map"></div>
-
+    <div class="m-3">
+        <a style="color: azure;" id="link" href="../index.html"><i class="arrow left"></i> Atrás</a>
+    </div>
     <script>
 
         function iniciaMapa() {
@@ -58,13 +62,13 @@
 
             var icono = {
                 url: "https://i.redd.it/9f9qan0yg3y51.gif",
-                scaledSize: new google.maps.Size(25,25),
-                origin: new google.maps.Point(0,0),
-                anchor: new google.maps.Point(0,0),
+                scaledSize: new google.maps.Size(25, 25),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(0, 0),
             };
 
             var marker = new google.maps.Marker({
-                position: {lat: 0, lng: 0},
+                position: { lat: 0, lng: 0 },
                 icon: icono,
                 map: map
             });
@@ -79,9 +83,9 @@
                 maximumAge: 30 * 1000,
             };
 
-            if(navigator.geolocation){
-                boton.addEventListener('click', function(){
-                    watchId = navigator.geolocation.watchPosition(function(position){
+            if (navigator.geolocation) {
+                boton.addEventListener('click', function () {
+                    watchId = navigator.geolocation.watchPosition(function (position) {
                         var lat = position.coords.latitude;
                         var lng = position.coords.longitude;
 
@@ -95,25 +99,25 @@
                         var fechayhora = (new Date(position.timestamp)).toString();
 
                         const html = `
-                            <p>Coordenadas: ${ coordenadas } </p>
-                            <p>Exactitud: ${ exactitud } </p>
-                            <p>Altitud: ${ altitud } </p>
-                            <p>Velocidad: ${ velocidad } </p>
-                            <p>Fecha y hora: ${ fechayhora } </p>
+                            <p>Coordenadas: ${coordenadas} </p>
+                            <p>Exactitud: ${exactitud} </p>
+                            <p>Altitud: ${altitud} </p>
+                            <p>Velocidad: ${velocidad} </p>
+                            <p>Fecha y hora: ${fechayhora} </p>
                         `;
                         const datos = document.getElementById("datos");
                         datos.innerHTML = html;
 
-                        marker.setPosition(new google.maps.LatLng(lat,lng));
-                        map.panTo(new google.maps.LatLng(lat,lng));
+                        marker.setPosition(new google.maps.LatLng(lat, lng));
+                        map.panTo(new google.maps.LatLng(lat, lng));
 
                     }, error, positionOptions);
                 });
 
                 const botondetener = document.getElementById("botondetener");
 
-                botondetener.addEventListener('click', function(){
-                    if(watchId !== null){
+                botondetener.addEventListener('click', function () {
+                    if (watchId !== null) {
                         navigator.geolocation.clearWatch(watchId);
 
                         const html = `
@@ -125,7 +129,7 @@
                 });
             }
 
-            function error(positionError){
+            function error(positionError) {
                 console.log(positionError.message);
             }
 
