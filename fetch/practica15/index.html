@@ -131,11 +131,48 @@
                 mapTypeControl: true,
                 mapTypeControlOption: {
                     style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-                    mapTypeIds: ['roadmap', 'satellite', 'terrain']
+                    mapTypeIds: ['roadmap', 'satellite','terrain']
                 }
             };
-
+            
             var mapa4 = new google.maps.Map(document.getElementById('mapa4'), propiedades4);
+
+            var propiedades5 = {
+                center: coordenadas,
+                zoom: 12,
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                    style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                    position: google.maps.ControlPosition.TOP_CENTER
+                },
+                zoomControl: true,
+                zoomControlOptions: {
+                    position: google.maps.ControlPosition.LEFT_CENTER
+                },
+                scaleControl: true,
+                streetViewControl: true,
+                streetViewControlOptions: {
+                    position: google.maps.ControlPosition.LEFT_TOP
+                },
+                fullScreenControl: true
+
+            };
+
+            var mapa5 = new google.maps.Map(document.getElementById('mapa5'), propiedades5);
+
+            var propiedades6 = {
+                center: coordenadas,
+                zoom: 12
+            };
+
+            var mapa6 = new google.maps.Map(document.getElementById('mapa6'), propiedades6);
+
+            var propiedades7 = {
+                center: coordenadas,
+                zoom: 12
+            };
+
+            var mapa7 = new google.maps.Map(document.getElementById('mapa7'), propiedades7);
         }
 
     </script>
