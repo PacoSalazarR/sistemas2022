@@ -129,12 +129,12 @@
                 center: coordenadas,
                 zoom: 12,
                 mapTypeControl: true,
-                mapTypeControlOption: {
+                mapTypeControlOptions: {
                     style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
                     mapTypeIds: ['roadmap', 'satellite','terrain']
                 }
             };
-            
+
             var mapa4 = new google.maps.Map(document.getElementById('mapa4'), propiedades4);
 
             var propiedades5 = {
@@ -160,9 +160,20 @@
 
             var mapa5 = new google.maps.Map(document.getElementById('mapa5'), propiedades5);
 
+            var limites = {
+                north: 21.390039,
+                south: 20.858414,
+                west: -102.149631,
+                east: -101.092990
+            }
+
             var propiedades6 = {
                 center: coordenadas,
-                zoom: 12
+                zoom: 12,
+                restriction: {
+                    latlngBounds: limites,
+                    strictBounds: false
+                }
             };
 
             var mapa6 = new google.maps.Map(document.getElementById('mapa6'), propiedades6);
