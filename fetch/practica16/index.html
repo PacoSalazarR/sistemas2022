@@ -58,7 +58,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="bg-light" id="mapa3"></div>
-                    <p>Zoom changed</p>
+                    <p>Obtiene nivel de zoom</p>
                 </div>
                 <div class="col-6">
                     <div class="bg-light" id="mapa4"></div>
@@ -73,11 +73,12 @@
             <div class="row">
                 <div class="col-6">
                     <div class="bg-light" id="mapa5"></div>
-                    <p>Mapa con ControlPosition</p>
+                    <p>Obtiene coordenadas con mouse event</p>
                 </div>
                 <div class="col-6">
                     <div class="bg-light" id="mapa6"></div>
                     <p>Mapa con Restricting MapBounds</p>
+                    <button class="btn btn-primary" id="btnCentrar">Centrar</button>
                 </div>
             </div>
         </div>
@@ -135,7 +136,7 @@
                 });
                 infowindow.open(mapa3);
                 nivelZoom = mapa3.getZoom();
-                infowindow.setContent('Zoom:' + nivelZoom);
+                infowindow.setContent('Zoom: ' + nivelZoom);
             });
 
             var mapa4 = new google.maps.Map(document.getElementById('mapa4'), propiedades);
@@ -150,6 +151,28 @@
                 });
                 mapa4.panTo(latLng);
             }
+
+            var mapa5 = new google.maps.Map(document.getElementById('mapa5'), propiedades);
+            var infowindow = new google.maps.InfoWindow({
+                    content: 'Haz click para obtener las coordenadas',
+                    position: coordenadas
+                });
+            infowindow.open(mapa5)
+            mapa5.addListener('click', function(evento){
+                infowindow.close();
+                infowindow = new google.maps.InfoWindow({position: evento.latLng});
+                infowindow.setContent(evento.latLng.toString());
+                infowindow.open(mapa5);
+            });
+
+            var mapa6 = new google.maps.Map(document.getElementById('mapa6'), propiedades);
+            google.maps.event.addDomListener(mapa6, 'click', function(){
+                window.alert('Se hizo click en el mapa')
+            });
+            var boton = document.getElementById('btnCentrar');
+            google.maps.event.addDomListener(boton,'click',function(){
+                mapa6.panTo(coordenadas);
+            });
             
         }
 
