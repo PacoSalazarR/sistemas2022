@@ -27,7 +27,7 @@
 
     </style>
 </head>
-<body class="basic-colors">
+<body>
     <div class="container-fluid">
         <div class="container">
             <div class="row">
@@ -77,19 +77,8 @@
                 </div>
                 <div class="col-6">
                     <div class="bg-light" id="mapa6"></div>
-                    <p>Mapa con Restricting MapBounds</p>
+                    <p>Add dom listener</p>
                     <button class="btn btn-primary" id="btnCentrar">Centrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid ">
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <div class="bg-light" id="mapa7"></div>
-                    <p>Mapa de 45 grados</p>
                 </div>
             </div>
         </div>
@@ -130,6 +119,7 @@
 
             var mapa3 = new google.maps.Map(document.getElementById('mapa3'), propiedades);
             mapa3.addListener('zoom_changed', function(){
+                infowindow.close();
                 var infowindow = new google.maps.InfoWindow({
                     content: 'Cambia el zoom',
                     position: coordenadas
