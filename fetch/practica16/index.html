@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-6">
                     <div class="bg-light" id="mapa2"></div>
-                    <p>Center changed</p>
+                    <p>Regresa al centro</p>
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@
                 position: coordenadas,
                 map: mapa2
             });
-            marker.addListener('center_changed', function(){
+            mapa2.addListener('center_changed', function(){
                 window.setTimeout(function(){
                     mapa2.panTo(marker2.getPosition());
                 },3000);
@@ -135,8 +135,21 @@
                 });
                 infowindow.open(mapa3);
                 nivelZoom = mapa3.getZoom();
-                infowindow.setContent('Zoom:'+nivelZoom);
+                infowindow.setContent('Zoom:' + nivelZoom);
             });
+
+            var mapa4 = new google.maps.Map(document.getElementById('mapa4'), propiedades);
+            mapa4.addListener('click', function(e){
+                console.log(e.latLng);
+                estableceMarcador(e.latLng);
+            });
+            function estableceMarcador(latLng){
+                var marker = new google.maps.Marker({
+                    position: latLng,
+                    map: mapa4
+                });
+                mapa4.panTo(latLng);
+            }
             
         }
 
