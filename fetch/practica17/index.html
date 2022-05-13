@@ -82,7 +82,7 @@
 
         function muestraLugares(){
                 if(navigator.geolocation){
-                    navigator.geolocation.getCurrentPosition(posicion =>{
+                    navigator.geolocation.getCurrentPosition((posicion )=>{
                         var coordenadas = {
                             lat: posicion.coords.latitude,
                             lng: posicion.coords.longitude
