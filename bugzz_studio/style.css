@@ -1,0 +1,565 @@
+.navbar-bugzz {
+    background-color: #1E2126;
+    position: sticky;
+    display: flex;
+    top: 0;
+    z-index: 1;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right; 
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.nav-icon {
+    width: 80px;
+}
+
+.nav-logo {
+    width: 200px;
+}
+
+.background-bugzz {
+    background-image: url("img/fondo.png");
+    background-size: contain;
+    background-repeat: repeat;
+    background-color: #000000;
+}
+
+.center-allignment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.center-image {
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+}
+
+.basic-font {
+    color: aliceblue;
+}
+
+.portfolio-font {
+    color: aliceblue;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.footer-font {
+    color: aliceblue;
+    text-align: justify;
+    font-size: .8rem;
+}
+
+.no-overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+.social-link {
+    margin: 2%;
+    padding: 3% 18%;
+}
+
+.social-link img,
+h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+.team-socials {
+    height: auto;
+    padding: 5% 15%;
+}
+
+#link {
+    color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+}
+
+#imgequipo {
+    height: 340px
+}
+
+/* Portafolio */
+#img-portafolio1 {
+    height: 280px;
+    margin-top: 2%;
+    margin-left: 17%;
+}
+
+#txt-portafolio1 {
+    margin-left: 21%;
+    width: 400px;
+}
+
+#img-portafolio2 {
+    height: 280px;
+    margin-left: 39%;
+    margin-top: 6%;
+}
+
+#txt-portafolio2 {
+    margin-left: 19%;
+    width: 400px;
+}
+
+#img-portafolio3 {
+    margin-left: 5rem;
+    height: 290px;
+    margin-top: 3rem;
+}
+
+#txt-portafolio3 {
+    margin-left: 5rem;
+    width: 400px;
+}
+
+#col-logo {
+    width: 30%;
+    overflow: hidden;
+}
+
+#img-logo {
+    max-height: 290px;
+}
+
+/*galería*/
+#col-galeria {
+    width: 70%;
+    overflow: hidden;
+    height: 1200px;
+    padding: 3%;
+    margin-bottom: 5%;
+}
+
+#row-galeria {
+    height: 1200px;
+    padding: 3%;
+    margin-bottom: 5%;
+    overflow: hidden;
+}
+
+#img5 {
+    max-width: 30%;
+    position: absolute;
+    left: 70%;
+    top: 40%;
+}
+
+#img6 {
+    max-width: 35%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+
+#img7 {
+    max-width: 33%;
+    position: absolute;
+    left: 39%;
+    top: 45%;
+}
+
+#img8 {
+    max-width: 30%;
+    position: absolute;
+    left: 31%;
+    top: 10%;
+}
+
+#img9 {
+    max-width: 35%;
+    position: absolute;
+    left: 60%;
+    top: 5%;
+}
+
+#img11 {
+    max-width: 30%;
+    position: absolute;
+    left: 8%;
+    top: 73%;
+}
+
+#img12 {
+    max-width: 30%;
+    position: absolute;
+    left: 40%;
+    top: 74%;
+}
+
+#img13 {
+    max-width: 30%;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+    background: rgb(70, 70, 70);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #989898;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    /* Para tabletas: */
+
+    .navbar-bugzz {
+        background-color: #1E2126;
+        position: fixed;
+        height: 100px;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        z-index: 1;
+    }
+
+
+    .social-link {
+        margin: 7% auto;
+        padding: 2% 19%;
+    }
+
+    .basic-font {
+        font-size: 27px;
+    }
+
+    #imgequipo {
+        height: 231px
+    }
+
+    .team-socials {
+        height: auto;
+        padding: 3% 9%;
+    }
+
+    /*galería*/
+    #col-logo {
+        width: 100%;
+        height: 200px;
+        margin-top: 6rem;
+    }
+
+    #img-logo {
+        max-height: 200px;
+    }
+
+    #col-galeria {
+        width: 100%;
+    }
+
+    #row-galeria {
+        height: 1400px;
+        padding: 3%;
+        margin-bottom: 5%;
+    }
+
+    /*ready player1*/
+    #img5 {
+        max-width: 26%;
+        position: absolute;
+        left: 31%;
+        top: 58%;
+    }
+
+    /*purple room*/
+    #img6 {
+        max-width: 33%;
+        position: absolute;
+        left: 2%;
+        top: 4%;
+    }
+
+    /*asiatic room*/
+    #img7 {
+        max-width: 30%;
+        position: absolute;
+        left: 16%;
+        top: 32%;
+    }
+
+    /*lemon*/
+    #img8 {
+        max-width: 27%;
+        position: absolute;
+        left: 39%;
+        top: 11%;
+    }
+
+    /*modern room*/
+    #img9 {
+        max-width: 31%;
+        position: absolute;
+        left: 62%;
+        top: 63%;
+    }
+
+    /*idk*/
+    #img11 {
+        max-width: 27%;
+        position: absolute;
+        left: 1%;
+        top: 57%;
+    }
+
+    /*loft bed*/
+    #img12 {
+        max-width: 33%;
+        position: absolute;
+        left: 69%;
+        top: 1%;
+    }
+
+    /*death*/
+    #img13 {
+        max-width: 26%;
+        position: absolute;
+        left: 71%;
+        top: 28%;
+    }
+
+    /*portafolio*/
+    #img-portafolio1 {
+        height: 250px;
+        margin-top: 2%;
+        margin-left: 17%;
+    }
+
+    #txt-portafolio1 {
+        margin-left: 21%;
+        width: 300px;
+    }
+
+    #img-portafolio2 {
+        height: 250px;
+        margin-left: 39%;
+        margin-top: 6%;
+    }
+
+    #txt-portafolio2 {
+        margin-left: 19%;
+        width: 300px;
+    }
+
+    #img-portafolio3 {
+        margin-left: 5rem;
+        height: 250px;
+        margin-top: 3rem;
+    }
+
+    #txt-portafolio3 {
+        margin-left: 5rem;
+        width: 300px;
+    }
+
+    .portfolio-font {
+        color: aliceblue;
+        text-align: justify;
+        font-size: 1.04rem;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    /* Para teléfonos: */
+    .navbar-bugzz {
+        background-color: #1E2126;
+        position: fixed;
+        height: 100px;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        z-index: 1;
+    }
+
+    .nav-logo {
+        width: 150px;
+    }
+
+    .social-link {
+        margin: 9% auto;
+        padding: 2% 9%;
+    }
+
+    .basic-font {
+        font-size: 23px;
+    }
+
+    #imgequipo {
+        height: 186px
+    }
+
+    .team-socials {
+        height: auto;
+        padding: 3% 9%;
+    }
+
+    /*galería*/
+    #col-logo {
+        width: 100%;
+        height: 200px;
+        margin-top: 4rem;
+    }
+
+    #img-logo {
+        max-height: 150px;
+    }
+
+    #col-galeria {
+        width: 100%;
+    }
+
+    #row-galeria {
+        height: 1400px;
+        padding: 3%;
+        margin-bottom: 5%;
+    }
+
+    /*ready player1*/
+    #img5 {
+        max-width: 39%;
+        position: absolute;
+        left: 5%;
+        top: 67%;
+    }
+
+    /*purple room*/
+    #img6 {
+        max-width: 45%;
+        position: absolute;
+        left: 5%;
+        top: 0%;
+    }
+
+    /*asiatic room*/
+    #img7 {
+        max-width: 45%;
+        position: absolute;
+        left: 55%;
+        top: 25%;
+    }
+
+    /*lemon*/
+    #img8 {
+        max-width: 40%;
+        position: absolute;
+        left: 57%;
+        top: .5%;
+    }
+
+    /*modern room*/
+    #img9 {
+        max-width: 50%;
+        position: absolute;
+        left: 52%;
+        top: 74%;
+    }
+
+    /*idk*/
+    #img11 {
+        max-width: 40%;
+        position: absolute;
+        left: 5%;
+        top: 47%;
+    }
+
+    /*loft bed*/
+    #img12 {
+        max-width: 45%;
+        position: absolute;
+        left: 55%;
+        top: 47%;
+    }
+
+    /*death*/
+    #img13 {
+        max-width: 39%;
+        position: absolute;
+        left: 5%;
+        top: 20%;
+    }
+
+    /*portafolio*/
+    #img-portafolio1 {
+        height: 220px;
+        margin-top: 2%;
+        margin-left: 13%;
+    }
+
+    #txt-portafolio1 {
+        margin-left: 21%;
+        width: 200px;
+    }
+
+    #img-portafolio2 {
+        height: 220px;
+        margin-left: 41%;
+        margin-top: 6%;
+    }
+
+    #txt-portafolio2 {
+        margin-left: 19%;
+        width: 250px;
+    }
+
+    #img-portafolio3 {
+        margin-left: .3rem;
+        height: 220px;
+        margin-top: 3rem;
+    }
+
+    #txt-portafolio3 {
+        margin-left: 1rem;
+        width: 250px;
+    }
+
+    .portfolio-font {
+        color: aliceblue;
+        text-align: justify;
+        font-size: 1rem;
+    }
+}
