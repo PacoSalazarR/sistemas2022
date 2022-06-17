@@ -58,17 +58,17 @@ li a:hover:not(.active) {
 }
 
 .basic-font {
-    color: aliceblue;
+    color: white;
 }
 
 .portfolio-font {
-    color: aliceblue;
+    color: white;
     text-align: justify;
     font-size: 1.3rem;
 }
 
 .footer-font {
-    color: aliceblue;
+    color: white;
     text-align: justify;
     font-size: .8rem;
 }
@@ -162,60 +162,68 @@ h1 {
     overflow: hidden;
 }
 
+/*ready player1*/
 #img5 {
     max-width: 30%;
-    position: absolute;
-    left: 70%;
-    top: 40%;
-}
-
-#img6 {
-    max-width: 35%;
     position: absolute;
     left: 0%;
     top: 0%;
 }
 
-#img7 {
-    max-width: 33%;
+/*purple room*/
+#img6 {
+    max-width: 32%;
     position: absolute;
-    left: 39%;
+    left: 35%;
+    top: 0%;
+}
+
+/*asiatic room*/
+#img7 {
+    max-width: 32%;
+    position: absolute;
+    left: 0%;
     top: 45%;
 }
 
+ /*lemon*/
 #img8 {
-    max-width: 30%;
+    max-width: 32%;
     position: absolute;
-    left: 31%;
-    top: 10%;
+    left: 70%;
+    top: 0%;
 }
 
+/*modern room*/
 #img9 {
-    max-width: 35%;
+    max-width: 32%;
     position: absolute;
-    left: 60%;
-    top: 5%;
+    left: 70%;
+    top: 30%;
 }
 
+/*idk*/
 #img11 {
-    max-width: 30%;
+    max-width: 32%;
     position: absolute;
-    left: 8%;
-    top: 73%;
+    left: 0%;
+    top: 70%;
 }
 
+/*loft bed*/
 #img12 {
-    max-width: 30%;
+    max-width: 32%;
     position: absolute;
-    left: 40%;
-    top: 74%;
+    left: 36%;
+    top: 70%;
 }
 
+/*death*/
 #img13 {
     max-width: 30%;
     position: absolute;
-    left: 10%;
-    top: 30%;
+    left: 70%;
+    top: 60%;
 }
 
 /* Scrollbar */
@@ -396,7 +404,7 @@ h1 {
     }
 
     .portfolio-font {
-        color: aliceblue;
+        color: white;
         text-align: justify;
         font-size: 1.04rem;
     }
@@ -558,7 +566,7 @@ h1 {
     }
 
     .portfolio-font {
-        color: aliceblue;
+        color: white;
         text-align: justify;
         font-size: 1rem;
     }
